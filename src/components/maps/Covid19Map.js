@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import ReactMapGL, { Marker } from 'react-map-gl';
-import '../Covid19.css'
+import '../Covid19.css';
 
-import { Container, Row } from 'react-bootstrap';
+
+import { Container } from 'react-bootstrap';
 import ValueContext from '../ValueContext';
 
 
@@ -21,9 +22,9 @@ export default function Covid19Map() {
  
   return (
     <>
-      <h1>Map : Country name and Active cases.</h1>
-      <Container>
-        <Row className="justify-content-md-center" >
+       
+      <Container className='Map'>
+        
         <ReactMapGL {...viewport}   
             mapboxApiAccessToken ={process.env.REACT_APP_MAPBOX_TOKEN}
             mapStyle="mapbox://styles/ridarafisyed/ckbbsjkfk0k5s1infhozwl231" 
@@ -36,15 +37,15 @@ export default function Covid19Map() {
                 latitude={data.countryInfo.lat} 
                 longitude={data.countryInfo.long}
                 >         
-                 <button className='btn-link btn-lg' 
+                 <button className='btn-link btn-lg map_marker' 
                  title={ data.country +" : " + data.active} 
                  alt={ data.country +" : " + data.active}>
-                 <i className='fas fa-virus text-danger'></i>
+                 <i className='fas fa-virus w3-text-yellow'></i>
                  </button>   
           </Marker>
           )))}
         </ReactMapGL>
-        </Row>
+
       </Container>
     </>       
   );

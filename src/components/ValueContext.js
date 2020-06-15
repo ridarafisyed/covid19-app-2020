@@ -1,5 +1,5 @@
-import React, { createContext } from 'react';
+import React from 'react';
 
-const ValueContext = createContext(null,null);
+const ValueContext = React.createContext({country:null, latest:null});
 
 export default ValueContext;

@@ -10,6 +10,7 @@
     "apexcharts": "^3.19.2",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
+    "chart.js": "^2.9.3",
     "classnames": "^2.2.6",
     "mapbox-gl": "^1.11.0",
     "react": "^16.13.1",

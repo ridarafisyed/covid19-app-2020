@@ -1,8 +1,11 @@
-.map{
-    align-items: center;
-    align-content: center;
+.Map{
+    padding: 2.5vw;  
 }
-.markerStyle{
-    
-
+.card-pp i:hover{
+    color:white;
+    background-color: white;
 }
+.map_marker i:hover {
+    font-size: 25px;
+    color: yellow;
+  }
